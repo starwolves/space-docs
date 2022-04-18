@@ -9,4 +9,4 @@ Join [our Discord](https://discord.gg/yypmun9ctt)!
 ## Docs
 
 What you will find here is strictly technical documentation, predominantly related to the server as it is authorative and even mods are strictly modular server-side code additions.
-Therefore the technical contributions from the Space Frontiers community will be server-side improvements and mods.
+Therefore the technical contributions from the Space Frontiers community will be server-side improvements and server-side mods.

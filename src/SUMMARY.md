@@ -3,12 +3,12 @@
 
 # User Guides
 - [Introduction](./user_guides/introduction.md)
-- [Adding a new entity](./user_guides/adding_new_entity.md)
-- [Creating a new mod](./user_guides/creating_new_mod.md)
-- [Map & content editor](./user_guides/map_content_editor_gui.md)
-- [Adding a new humanoid](./user_guides/adding_new_humanoid.md)
-- [Adding a new ship tile](./user_guides/adding_new_ship_cell.md)
-- [Editing or creating a map](./user_guides/editing_creating_map.md)
+    - [Creating a new mod](./user_guides/creating_new_mod.md)
+    - [Map & content editor](./user_guides/map_content_editor_gui.md)
+    - [Adding a new entity](./user_guides/adding_new_entity.md)
+    - [Editing or creating a map](./user_guides/editing_creating_map.md)
+    - [Adding a new humanoid](./user_guides/adding_new_humanoid.md)
+    - [Adding a new ship tile](./user_guides/adding_new_ship_cell.md)
 
 # Specifications
 - [Core Elements](./core_elements.md)
@@ -16,8 +16,10 @@
     - [Pawns](./specifications/core_elements/pawn.md)
     - [Combat](./specifications/core_elements/combat.md)
     - [Inventory](./specifications/core_elements/inventory.md)
-    - [Entity Updates](./specifications/core_elements/entity_updates.md)
+    - [Chat](./specifications/core_elements/chat.md)
+    - [Tab Actions](./specifications/core_elements/tab_actions.md)
     - [Field Of View](./specifications/core_elements/field_of_view.md)
+    - [Entity Updates](./specifications/core_elements/entity_updates.md)
     - [Console Commands](./specifications/core_elements/console_commands.md)
 - [Core Components](./core_components.md)
     - [StaticTransform](./specifications/core_components/static_transform_component.md)
