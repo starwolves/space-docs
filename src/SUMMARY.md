@@ -2,7 +2,7 @@
 [Space Frontiers](./space_frontiers.md)
 
 # User Guides
-- [Introduction](./user_guides/introduction.md)
+- [Basics & Introduction](./user_guides/basics_introduction.md)
     - [Creating a new mod](./user_guides/creating_new_mod.md)
     - [Map & content editor](./user_guides/map_content_editor_gui.md)
     - [Adding a new entity](./user_guides/adding_new_entity.md)
@@ -35,4 +35,4 @@
     - [RigidBodyBundle](./specifications/core_components/rigid_body_bundle_component.md)
     - [ColliderBundle](./specifications/core_components/collider_bundle_component.md)
     - [WorldMode](./specifications/core_components/world_mode_component.md)
-    - [PlayerInput](./specifications/core_components/player_input_component.md) 
+    - [ControllerInput](./specifications/core_components/controller_input_component.md) 

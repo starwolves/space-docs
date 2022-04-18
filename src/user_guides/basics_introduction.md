@@ -1,4 +1,4 @@
-# Introduction 🌌
+# Basics & Introduction 🌌
 
 Before we get started, the documentation assumes that you can do the following things:
 1. Write simple applications with the Rust programming language.
@@ -9,7 +9,9 @@ The aforementioned technologies and engines offer community hubs on Discord and 
 
 Remember, everyone should be able to learn basics of the technology used here if given enough time. You just have to be patient and find the right educational resources, we can help you along the way on [our Discord](discord.gg/yypmun9ctt) too.
 
-Always keep in mind that everything is integrated with Bevy ECS, always keep in mind that we are strictly working with an Entity Component System architecture when reading through these documentations. **Please take some time to learn the basics of Bevy ECS, strictly the ECS part. Learn about Bevy events too.**
+Always keep in mind that everything is integrated with Bevy ECS, always keep in mind that we are strictly working with an Entity Component System architecture when reading through these documentations.
+
+**Please take some time to learn the basics of Bevy ECS, strictly the ECS part. Learn about Bevy events too.**
 
 It is highly recommended to get an editor that specifically has integrated support for Rust. Visual Studio Code in combination with the rust-analyzer extension is a great option!
 
