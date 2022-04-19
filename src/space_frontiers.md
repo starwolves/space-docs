@@ -10,3 +10,5 @@ Join [our Discord](https://discord.gg/yypmun9ctt)!
 
 What you will find here is strictly technical documentation, predominantly related to the server as it is authorative and even mods are strictly modular server-side code additions.
 Therefore the technical contributions from the Space Frontiers community will be server-side improvements and server-side mods.
+
+**The documentation is still in a very early stage and a work-in-progress, if you would like to see certain improvements please let us know!**
