@@ -8,3 +8,5 @@ The gridmap is loaded up from one of the maps inside `data/maps/`. The json file
 
 The live gridmap data are stored in resources `GridmapMain`, `GridmapDetails1` and `GridmapData` found inside `src/space/core/gridmap/resources.rs`.
 Each gridmap cell has its own coordinated. Since gridmap data is stored in a vector and we know the min and max coordinates we can easily turn the coordinates into a usize. This way we iterate much faster over the gridmap. You can find functions that obtain the indexes in `src/space/core/gridmap/functions/gridmap_functions.rs`.
+
+The y coordinate only has two different values, either -1 (floor cell) or 0 (wall height cell). 
