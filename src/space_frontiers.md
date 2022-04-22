@@ -4,7 +4,7 @@
 **Space Frontiers** is a SCI-FI community game simulating space(ships). Built from the ground up to support moddable online action multiplayer and roleplay!
 For more information about the game, its socials and technology visit the open-source [Github repository](https://github.com/starwolves/space)!
 
-Join [our Discord](https://discord.gg/yypmun9ctt)!
+Join [our Discord](https://discord.gg/Hdxz9h33E7)!
 
 ## Docs
 
