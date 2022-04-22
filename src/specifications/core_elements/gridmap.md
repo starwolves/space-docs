@@ -7,6 +7,8 @@ The map also consists of more than one gridmap overlays. Currently there is a `m
 The gridmap is loaded up from one of the maps inside `data/maps/`. The json files found there are exported from the unreleased map and content editor. 
 
 The live gridmap data are stored in resources `GridmapMain`, `GridmapDetails1` and `GridmapData` found inside `src/space/core/gridmap/resources.rs`.
-Each gridmap cell has its own coordinated. Since gridmap data is stored in a vector and we know the min and max coordinates we can easily turn the coordinates into a usize. This way we iterate much faster over the gridmap. You can find functions that obtain the indexes in `src/space/core/gridmap/functions/gridmap_functions.rs`.
+Each gridmap cell has its own coordinated.
 
-The y coordinate only has two different values, either -1 (floor cell) or 0 (wall height cell). 
+To turn a 3d position into a gridmap coordinate use the functions found in `src/space/core/gridmap/functions/gridmap_functions.rs`.
+
+The y coordinate only has two different values, either `-1` (floor cell) or `0` (wall height cell). 
