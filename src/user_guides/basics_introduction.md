@@ -31,16 +31,14 @@ The main server loop builder can be found in `src/space/mod.rs`.
 
 The logic is split up in two categories `core` and `entities`. `entities` contains all exclusive logic related to the officially existing entities that are available in the game. Many of which can be spawned from the in-game console. In here you will find spawn functions, components and systems specific to individual entities; logic that isn't shared with other entities.
 
-In terms of code related to specific entities it is also important to know about `src/space/core/entity/mod.rs` as that is the initializer for all entities belonging to the official core of the server.
-
-`core` covers logic that spans across multiple entity types or that covers exclusive gameplay features not related to any specific entity. Here you will find the core gameplay elements, also the main world and gridmap initialization based on the json files found in the map data folder we have touched on. To understand how the gridmap and tiles get initialized please take a look at `src/space/core/gridmap/`. The `functions` folder contains the logic that reads map data at run-time from the map data json files, whereas inside `src/space/core/gridmap/mod.rs` each individual tile of the gridmap gets initialized much like how we did with entities in `src/space/entities/mod.rs`!
+`core` covers logic that spans across multiple entity types or that covers exclusive gameplay features not related to any specific entity. Here you will find the core gameplay elements, also the main world and gridmap initialization based on the json files found in the map data folder we have touched on. To understand how the gridmap and tiles get initialized please take a look at `src/space/core/gridmap/`. The `functions` folder contains the logic that reads map data at run-time from the map data json files, whereas inside `src/space/core/gridmap/mod.rs` each individual tile of the gridmap gets initialized.
 
 As you can see both logic related to `core` and `entities` are methodically organized and split up into the following named files and/or folders:
 1. **functions** where all helpful code functions are found.
 2. **systems** contains most logic. Systems usually are the ones to call **functions**. These are ECS systems directly added to the server loop we have touched on earlier.
 3. **components** has all components that are usually added to entities upon spawning them or after gameplay triggers occur.
 4. **entity_update** similar to **systems**, because this also contains Bevy ECS systems that are inserted into the game loop, but these ones are seperated as special entity_update systems which contain logic that has to do with constructing Godot specific net code to be sent to clients which have the entity in their field of view. These systems contain logic to alter specific Godot nodes of specific entities in the view of clients. Think animation player updates, position updates of nodes, texture swaps and `SpatialMaterial` property adjustments.
-5. **events** will have the Bevy ECS events layed out, to communicate between systems and to prepare and send net code messages to the client.
+5. **events** will have the Bevy ECS events and other hooks layed out, to communicate between systems and to prepare and send net code messages to the client.
 6. **mod** where startup systems are located, systems that run once at the very beginning when the server starts to initialize things.
 7. **resources** contains the Bevy ECS resources used, also initialized in the server loop we have touched on before.
 8. **spawn** only exists in `entities` and here you find the main spawn function for each individual entity, the one that gets called when this entity is supposed to spawn in either on server launch from `entities.json` or through spawn commands or other in-game events.
@@ -51,7 +49,7 @@ Let's explain how it is possible for Bevy ECS to send dynamic netcode to the cli
 
 First and foremost, make sure you have obtained a prototype client from [the Discord](discord.gg/yypmun9ctt). Because with this client a folder named "content" is shipped, which includes either Godot engine resources or raw files such as png's which the client is able to load in at run-time.
 
-As you can see, the content files and folders are strictly named. The naming is a critical aspect to being able to properly load in entities for the client and then further make netcode calls on those newly added entities through dynamic netcode, netcode which takes uses strings to identify different entity types. In fact the identifying strings for entities are the names of the folders you see located in `content/entities/`. Go ahead and take a look at `src/space/entities/mod.rs` and the **spawn** functions of entities and find that we use the same entity names on the server as is reflected in the content folder of the client.
+As you can see, the content files and folders are strictly named. The naming is a critical aspect to being able to properly load in entities for the client and then further make netcode calls on those newly added entities through dynamic netcode, netcode which takes uses strings to identify different entity types. In fact the identifying strings for entities are the names of the folders you see located in `content/entities/`.
 
 Right now the content folder is already supplied with the client upon download, but in the future these content folders will be downloaded from either the server itself or an HTML download server, much like how previous classic games like Garry's Mod have done it.
 
