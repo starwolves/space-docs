@@ -6,4 +6,4 @@ All entities with the `Sensable` component are bound to these FOV checks perform
 
 Netcode updates about entities are only sent to clients when the possessed pawn actually senses those entities. This field of view system is heavily integrated into the game and also serves as anti-cheat protection as it is performed server-side.
 
-To turn a 3d position into a gridmap coordinate use the functions found in `src/space/core/gridmap/functions/gridmap_functions.rs`.
+To turn a 3d position into a gridmap coordinate use the functions found in `src/core/gridmap/functions/gridmap_functions.rs`.

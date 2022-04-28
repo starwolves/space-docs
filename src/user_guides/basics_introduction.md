@@ -27,11 +27,11 @@ These json files are to be found in `data/maps/`.
 
 Game mods that can have their own additional sets of content, entities, systems and components would be dragged and dropped into `src/plugins/`.
 
-The main server loop builder can be found in `src/space/mod.rs`.
+The main server loop builder can be found in `src/mod.rs`.
 
 The logic is split up in two categories `core` and `entities`. `entities` contains all exclusive logic related to the officially existing entities that are available in the game. Many of which can be spawned from the in-game console. In here you will find spawn functions, components and systems specific to individual entities; logic that isn't shared with other entities.
 
-`core` covers logic that spans across multiple entity types or that covers exclusive gameplay features not related to any specific entity. Here you will find the core gameplay elements, also the main world and gridmap initialization based on the json files found in the map data folder we have touched on. To understand how the gridmap and tiles get initialized please take a look at `src/space/core/gridmap/`. The `functions` folder contains the logic that reads map data at run-time from the map data json files, whereas inside `src/space/core/gridmap/mod.rs` each individual tile of the gridmap gets initialized.
+`core` covers logic that spans across multiple entity types or that covers exclusive gameplay features not related to any specific entity. Here you will find the core gameplay elements, also the main world and gridmap initialization based on the json files found in the map data folder we have touched on. To understand how the gridmap and tiles get initialized please take a look at `src/core/gridmap/`. The `functions` folder contains the logic that reads map data at run-time from the map data json files, whereas inside `src/core/gridmap/mod.rs` each individual tile of the gridmap gets initialized.
 
 As you can see both logic related to `core` and `entities` are methodically organized and split up into the following named files and/or folders:
 1. **functions** where all helpful code functions are found.
@@ -61,4 +61,4 @@ For example, `pawn` movement and input would be registered and processed in a **
 Netcode related to Godot scene trees and nodes is dynamic, meaning that it involves a lot of string identifiers and variant values. It also involves dynamically sized data sets like HashMaps.
 Each Godot client has a dynamically linked closed-source Rust library named `networkhound` which is capable of turning this Rust-based netcode into Godot variants for the client and execute logic based on that.
 
-You can find all the netcode messages at `src/space/core/networking/resources.rs`.
+You can find all the netcode messages at `src/core/networking/resources.rs`.
